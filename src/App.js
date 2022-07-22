@@ -1,16 +1,18 @@
-// import React {useState} from "react";
 import './styles/App.css';
-import MyButton from "./components/UI/button/MyButton";
-
+import MyNavbar from "./components/head/MyNavbar";
+import MyMain from "./components/main/MyMain";
 
 function App() {
 
   return (
     <div className="App">
-        <h1> Hello World </h1>
-        <MyButton>
-            Home
-        </MyButton>
+        <MyNavbar>
+
+        </MyNavbar>
+
+        <MyMain>
+
+        </MyMain>
     </div>
   );
 }
