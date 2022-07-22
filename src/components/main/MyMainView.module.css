@@ -1,0 +1,8 @@
+.myMainView {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
