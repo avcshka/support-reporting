@@ -1,18 +1,16 @@
 import React from 'react';
-import MyMenu from "./MyMenu";
-import MyMainView from "./MyMainView";
+import MyMenu from "../menu/MyMenu";
+import MyMainView from "../mainview/MyMainView";
 import classes from "./MyMain.module.css"
 
 const MyMain = () => {
     return (
         <div className={classes.myMain}>
-            <MyMenu>
 
-            </MyMenu>
+            <MyMenu />
 
-            <MyMainView>
+            <MyMainView />
 
-            </MyMainView>
         </div>
     );
 };
