@@ -2,3 +2,7 @@
     display: flex;
     background-color: rgba(0, 0, 0, 0.9);
 }
+
+.signOut {
+    font-size: 30px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "../mainbtn/MainBtn.module.css"
+import classes from "./MainBtn.module.css"
 
 const MainBtn = ({children, ...props}) => {
     return (
