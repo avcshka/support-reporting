@@ -1,0 +1,12 @@
+.myLogo {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+    font-family: Arial, sans-serif;
+    width: 25%;
+    background-color: #58a76c;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,13 @@
+.myMenu {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: 25%;
+    height: 100vh;
+}
+
+
+.iconButton {
+    margin-right: 10px;
+}
+
