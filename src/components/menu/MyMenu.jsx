@@ -1,30 +1,24 @@
-import React from 'react';
+import Icon from "../UI/icon/Icon";
 import MyButton from "../UI/button/MyButton";
-import {HomeOutlined, UnorderedListOutlined, UserOutlined} from "@ant-design/icons";
 import classes from "./MyMenu.module.css"
 
 
-const MyMenu = () => {
+const MyMenu = ({menuItems}) => {
     return (
         <div className={classes.myMenu}>
-
-            <MyButton>
-                <HomeOutlined className={classes.iconButton}/>
-                Home
-            </MyButton>
-
-            <MyButton>
-                <UserOutlined className={classes.iconButton}/>
-                Users
-            </MyButton>
-
-            <hr/>
-
-            <MyButton>
-                <UnorderedListOutlined className={classes.iconButton}/>
-                Reports
-            </MyButton>
-
+            {menuItems.map(menuItem =>
+                <MyButton>
+                    <div className={classes.myItems}>
+                        {menuItem.icon
+                        ? <div className={classes.myIcon}>
+                                <Icon icon={menuItem.icon}/>
+                            </div>
+                            : <div style={{marginLeft: '20px'}}></div>
+                        }
+                        {menuItem.title}
+                    </div>
+                </MyButton>
+            )}
         </div>
     );
 };

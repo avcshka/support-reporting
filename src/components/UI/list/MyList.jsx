@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MyTableHeader = () => {
+const MyList = () => {
     return (
         <div>
-            
+
         </div>
     );
 };
 
-export default MyTableHeader;
+export default MyList;

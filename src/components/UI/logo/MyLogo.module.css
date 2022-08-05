@@ -4,7 +4,9 @@
     font-size: 16px;
     color: white;
     font-family: Arial, sans-serif;
-    width: 25%;
+    font-weight: 600;
+    width: 20%;
+    height: auto;
     background-color: #58a76c;
     align-items: center;
     padding-left: 20px;
