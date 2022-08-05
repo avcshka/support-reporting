@@ -6,8 +6,16 @@
     height: 100vh;
 }
 
-
-.iconButton {
-    margin-right: 10px;
+.myItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.myIcon {
+    padding-right: 5px;
+}
+
+.displayData {
+
+}
