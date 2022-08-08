@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add Icon component">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add report table" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feat/implement-main-view" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,7 +71,7 @@
       <workItem from="1659626664330" duration="29000" />
       <workItem from="1659682189843" duration="21909000" />
       <workItem from="1659940941586" duration="3398000" />
-      <workItem from="1659947197482" duration="14316000" />
+      <workItem from="1659947197482" duration="15152000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -103,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659710420526</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add report table">
+      <created>1659970348517</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659970348517</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +123,7 @@
     <MESSAGE value="report in MyMenu" />
     <MESSAGE value="feat: add Icon component" />
     <MESSAGE value="chore: clean up code project" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: clean up code project" />
+    <MESSAGE value="feat: add report table" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add report table" />
   </component>
 </project>
