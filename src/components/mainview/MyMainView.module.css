@@ -1,7 +1,6 @@
 .myMainView {
-    width: 100%;
+    width: 85%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
-
