@@ -2,31 +2,34 @@ import React, {useEffect, useState} from 'react';
 import classes from "./MyMainView.module.css"
 import MyTable from "../UI/table/MyTable";
 import MyHeaderView from "./headerview/MyHeaderView";
-import axios from "axios";
+import ReportService from "../../API/ReportService";
+import Loader from "../UI/Loader/Loader";
 
 const MyMainView = () => {
-    const [rows, setRows] = useState([])
-    const [columns, setColumns] = useState([])
+    const [rows, setRows] = useState([]);
+    const [columns, setColumns] = useState([]);
+    const [isReportLoading, setIsReportLoading] = useState(false);
 
     useEffect(() => {
         fetchTable()
     }, [])
 
     async function fetchTable() {
-        const responseTable =  await axios.get('https://test.oculeus.com/supportreport/get_report?dbeg=2022-05-31&dend=2022-08-03&ttt=2&typ=1')
-        setRows(responseTable.data);
-        setColumns(Object.keys(responseTable.data[0]));
+        setIsReportLoading(true);
+        const responseTable =  await ReportService.getAll();
+        setRows(responseTable);
+        setColumns(Object.keys(responseTable[0]));
+        setIsReportLoading(false);
     }
 
     return (
         <div className={classes.myMainView}>
-
             <MyHeaderView/>
-
             <hr/>
-
-            <MyTable columns={columns} rows={rows}/>
-
+            {isReportLoading
+                ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>
+                : <MyTable columns={columns} rows={rows}/>
+            }
         </div>
     );
 };

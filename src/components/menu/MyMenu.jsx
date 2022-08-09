@@ -5,11 +5,11 @@ import classes from "./MyMenu.module.css"
 const MyMenu = ({menuItems}) => {
     return (
         <div className={classes.myMenu}>
-            {menuItems.map(menuItem =>
-                <MyButton>
+            {menuItems.map((menuItem, index) =>
+                <MyButton key={'menuitem_' + index}>
                     <div className={classes.myItems}>
                         {menuItem.icon
-                        ? <div className={classes.myIcon}>
+                            ? <div className={classes.myIcon}>
                                 <Icon icon={menuItem.icon}/>
                             </div>
                             : <div style={{marginLeft: '20px'}}></div>

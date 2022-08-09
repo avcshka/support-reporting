@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import axios from "axios";
 import MyMenu from "../menu/MyMenu";
 import MyMainView from "../mainview/MyMainView";
+import ReportService from "../../API/ReportService";
 import classes from "./MyMain.module.css"
 
 const MyMain = () => {
@@ -16,8 +16,8 @@ const MyMain = () => {
     }, [])
 
     async function fetchReportList() {
-        const response = await axios.get('https://test.oculeus.com/supportreport/get_reports_list')
-        const mergedMenuItems = [...defaultMenuItems, ...response.data];
+        const responseReportList = await ReportService.getMenu()
+        const mergedMenuItems = [...defaultMenuItems, ...responseReportList];
         setMenuItems(mergedMenuItems);
     }
 
