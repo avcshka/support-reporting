@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add report table" />
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="refactor: decouple data fetching logic and other refactoring">
+      <change afterPath="$PROJECT_DIR$/src/API/ReportService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Loader/Loader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UI/Loader/Loader.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/input/MyInput.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/input/MyInput.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/main/MyMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/MyMain.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/MyNavbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/MyNavbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/MyNavbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/MyNavbar.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/implement-main-view" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,6 +85,8 @@
       <workItem from="1659682189843" duration="21909000" />
       <workItem from="1659940941586" duration="3398000" />
       <workItem from="1659947197482" duration="15152000" />
+      <workItem from="1660037669758" duration="3480000" />
+      <workItem from="1660047355238" duration="10000000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -124,6 +139,7 @@
     <MESSAGE value="feat: add Icon component" />
     <MESSAGE value="chore: clean up code project" />
     <MESSAGE value="feat: add report table" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add report table" />
+    <MESSAGE value="refactor: decouple data fetching logic and other refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: decouple data fetching logic and other refactoring" />
   </component>
 </project>

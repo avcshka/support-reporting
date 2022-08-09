@@ -5,25 +5,29 @@ const MyTable = ({rows, columns}) => {
     return (
         <div className={classes.myTable}>
             <table>
-                {columns.map(column => {
-                    return (
-                        <th>
-                            <tr>{column}</tr>
-                        </th>
-                    )
-                })}
+                <thead>
+                <tr>
+                    {columns.map((column, index) => {
+                        return (
+                            <th key={'head_' + index}>{column}</th>
+                        )
+                    })}
+                </tr>
+                </thead>
 
-                {rows.map((row, key) => {
+                <tbody>
+                {rows.map((row, index) => {
                     return (
-                        <tr key={key}>
-                            {columns.map(column => {
+                        <tr key={'row_' + index}>
+                            {columns.map((column, index) => {
                                 return (
-                                    <td>{row[column]}</td>
+                                    <td key={'cell_' + index}>{row[column]}</td>
                                 )
                             })}
                         </tr>
                     )
                 })}
+                </tbody>
             </table>
         </div>
     );

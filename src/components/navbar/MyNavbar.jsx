@@ -12,7 +12,7 @@ const MyNavbar = () => {
 
             <MyInput placeholder = "Search..."/>
 
-            <MyButton className='signOut'>Sign out</MyButton>
+            <MyButton className={classes.signOut}>Sign out</MyButton>
 
         </div>
     );
