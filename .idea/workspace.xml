@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="refactor: decouple data fetching logic and other refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API/ReportService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/ReportService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/button/MyButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button/MyButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/main/MyMain.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/main/MyMain.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="add report filters" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +74,7 @@
       <workItem from="1659947197482" duration="15152000" />
       <workItem from="1660037669758" duration="3480000" />
       <workItem from="1660047355238" duration="10914000" />
-      <workItem from="1660199623533" duration="25483000" />
+      <workItem from="1660199623533" duration="25821000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -122,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660058044525</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add report filters">
+      <created>1660233684501</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660233684501</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +142,7 @@
     <MESSAGE value="chore: clean up code project" />
     <MESSAGE value="feat: add report table" />
     <MESSAGE value="refactor: decouple data fetching logic and other refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: decouple data fetching logic and other refactoring" />
+    <MESSAGE value="add report filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="add report filters" />
   </component>
 </project>
