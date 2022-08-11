@@ -20,8 +20,8 @@ const MyCalendar = () => {
             <MainBtn style={{
                 marginLeft: '10px'
             }}>
-                <CalendarOutlined />
-                This week
+                <CalendarOutlined style={{paddingRight: '10px'}}/>
+                Calendar
             </MainBtn>
         </div>
     );

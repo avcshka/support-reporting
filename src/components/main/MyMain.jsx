@@ -5,6 +5,7 @@ import ReportService from "../../API/ReportService";
 import classes from "./MyMain.module.css"
 
 const MyMain = () => {
+    const [activeMenuItemId, setActiveMenuItemId] = useState(0);
     const [menuItems, setMenuItems] = useState([]);
     const defaultMenuItems = [
         {id: 0, title: 'Home', icon: 'HomeOutlined'},
@@ -21,12 +22,16 @@ const MyMain = () => {
         setMenuItems(mergedMenuItems);
     }
 
+    const changeActiveMenuItems = (id) => {
+        setActiveMenuItemId(id);
+    }
+
     return (
         <div className={classes.myMain}>
 
-            <MyMenu menuItems={menuItems}/>
+            <MyMenu menuItems={menuItems} changeActiveMenuItem={changeActiveMenuItems}/>
 
-            <MyMainView/>
+            <MyMainView reportId={activeMenuItemId}/>
 
         </div>
     );
