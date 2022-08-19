@@ -1,9 +1,9 @@
 import React from 'react';
 import MainBtn from "../mainbtn/MainBtn";
-import {CalendarOutlined} from "@ant-design/icons";
 import classes from "./MyCalendar.module.css"
 
 const MyCalendar = () => {
+
     return (
         <div className={classes.myCalendar}>
             <MainBtn style={{
@@ -16,13 +16,6 @@ const MyCalendar = () => {
                 borderTopLeftRadius: '0px',
                 borderBottomLeftRadius: '0px'
             }}>Export</MainBtn>
-
-            <MainBtn style={{
-                marginLeft: '10px'
-            }}>
-                <CalendarOutlined style={{paddingRight: '10px'}}/>
-                Calendar
-            </MainBtn>
         </div>
     );
 };

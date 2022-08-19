@@ -5,12 +5,12 @@
 }
 
 #root {
-
 }
 
 .App {
     width: 100%;
     height: auto;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .post {
@@ -19,3 +19,4 @@
 .hr {
     width: 100%;
 }
+
