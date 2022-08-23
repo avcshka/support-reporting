@@ -1,0 +1,14 @@
+{
+
+  "SERVER_URL_TABLE": "https://test.oculeus.com/supportreport/get_report?",
+  "SERVER_URL_MENU": "https://test.oculeus.com/supportreport/get_reports_list",
+
+  "THEME_COLORS": {
+
+    "PRIMARY": "#007bff",
+
+    "SECONDARY": "#fc3"
+
+  }
+
+}
