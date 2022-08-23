@@ -22,4 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-git add ..idea
+/.idea/
+.idea/workspace.xml
