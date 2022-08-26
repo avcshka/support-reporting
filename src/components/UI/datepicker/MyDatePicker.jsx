@@ -1,33 +1,39 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import DatePicker from "react-datepicker";
+import convertDate from "../../../helpers/convertDate";
 import "react-datepicker/dist/react-datepicker.css";
 import cl from './MyDatePicker.module.css'
 
-
 const MyDatePicker = ({onChangeDate}) => {
-    const [dateRange, setDateRange] = useState('');
-    const [startDate, endDate] = dateRange;
-    const [nowStartDate, setNowStartDate] = useState('')
-    const [nowEndDate, setNowEndDate] = useState('')
+    const [startDate, setStartDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(new Date())
 
-    const onDateTable = (id,startDate, endDate) => {
-        setNowStartDate(startDate);
-        setNowEndDate(endDate);
-        onChangeDate(startDate,endDate);
+    useEffect(() => {
+        if (startDate && endDate) {
+            onChangeDate(convertDate(startDate), convertDate(endDate));
+        }
+    }, [startDate, endDate])
+
+    const onChange = (dates) => {
+        const [start, end] = dates;
+        setStartDate(start);
+        setEndDate(end);
     }
 
     return (
         <div className={cl.datePickerContainer}>
             <div className={cl.datePicker}>
                 <DatePicker
+                    dateFormat="dd/MM/yyyy"
                     selectsRange={true}
                     startDate={startDate}
                     endDate={endDate}
                     onChange={(update) => {
-                        setDateRange(update);
-                        onDateTable();
-                        console.log('Сработал onChange')
+                        onChange(update);
                     }}
+                    maxDate={new Date()}
+                    placeholderText="Input your date"
+                    showDisabledMonthNavigation
                 />
             </div>
         </div>

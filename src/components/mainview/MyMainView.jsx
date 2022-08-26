@@ -10,30 +10,26 @@ const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
     const [columns, setColumns] = useState([]);
     const [isReportLoading, setIsReportLoading] = useState(false);
-    const [startDateTable, setStartDateTable] = useState('')
-    const [endDateTable, setEndDateTable] = useState('');
-    const [getDate, setGetDate] = useState('')
+    const [reportStartDate, setReportStartDate] = useState(new Date());
+    const [reportEndDate, setReportEndDate] = useState(new Date());
 
     const onChangeDate = (startDate, endDate) => {
-        // const dateNow = new Date().toLocaleString()
-        setStartDateTable(startDate)
-        setEndDateTable(endDate)
+        setReportStartDate(startDate)
+        setReportEndDate(endDate)
     }
 
     useEffect(() => {
         if (reportId > 0) {
-            fetchTable(reportId);
+            fetchTable(reportId, reportStartDate, reportEndDate);
         } else {
             setRows([]);
             setColumns([]);
-            setGetDate('');
         }
-    }, [reportId])
+    }, [reportId, reportStartDate, reportEndDate])
 
-    async function fetchTable(id) {
+    async function fetchTable(id,dateStart,dateEnd) {
         setIsReportLoading(true);
-        const responseTable = await ReportService.getAll(id);
-        setGetDate(responseTable);
+        const responseTable = await ReportService.getAll(id,dateStart,dateEnd);
         setRows(responseTable);
         setColumns(Object.keys(responseTable[0]));
         setIsReportLoading(false);
@@ -46,7 +42,7 @@ const MyMainView = ({reportId}) => {
 
             <hr/>
 
-            <MyDatePicker setGetDate={getDate} onChangeDate={onChangeDate} />
+            <MyDatePicker onChangeDate={onChangeDate} />
 
             {isReportLoading
                 ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>

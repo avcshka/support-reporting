@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add service.json, modify ReportService.js">
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="refactor: clean up code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/button/MyButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button/MyButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/ReportService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/ReportService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/Service.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/Service.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/node_modules/antd/dist/antd.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/react-datepicker/dist/es/index.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,27 +38,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexInter/Workspace/ZohoReport/frontend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Settings.JavaScript.Linters.JSHint&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/AlexInter/my-projects/js-practice",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\helpers" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\UI\icon" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\UI" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\mainview" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\menu" />
-      <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\navbar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
