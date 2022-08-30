@@ -5,12 +5,8 @@ import classes from "./MyHeaderView.module.css"
 const MyHeaderView = () => {
     return (
         <div className={classes.headerView}>
-
             <h1>Reports</h1>
-
-            <MyCalendar>
-
-            </MyCalendar>
+            <MyCalendar />
         </div>
     );
 };

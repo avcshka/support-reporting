@@ -6,7 +6,6 @@ const MyButton = ({children, active, setActive, ...props}) => {
     const rootClasses = [classes.myBtn]
     if (active) {
         rootClasses.push(classes.active)
-        console.log("active:", active);
     }
 
     return (
