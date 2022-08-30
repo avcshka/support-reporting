@@ -27,9 +27,9 @@ const MyMainView = ({reportId}) => {
         }
     }, [reportId, reportStartDate, reportEndDate])
 
-    async function fetchTable(id,dateStart,dateEnd) {
+    async function fetchTable(id, dateStart, dateEnd) {
         setIsReportLoading(true);
-        const responseTable = await ReportService.getAll(id,dateStart,dateEnd);
+        const responseTable = await ReportService.getAll(id, dateStart, dateEnd);
         setRows(responseTable);
         setColumns(Object.keys(responseTable[0]));
         setIsReportLoading(false);
