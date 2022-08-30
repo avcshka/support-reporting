@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="add report filters" />
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="refactor: clean up code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +18,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/antd/dist/antd.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/react-datepicker/dist/es/index.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/public/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/API/ReportService.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/API/Service.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/UI/icon/Icon.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/main/MyMain.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/menu/MyMenu.jsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2CFPmbhReSTXd0D2jr3acZVZeT9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,21 +46,22 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexInter/react-practice&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexInter/my-projects/js-practice&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\helpers" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\UI\icon" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\UI" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\mainview" />
       <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\menu" />
-      <recent name="C:\Users\AlexInter\Workspace\ZohoReport\frontend\src\components\navbar" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -75,6 +93,11 @@
       <workItem from="1660037669758" duration="3480000" />
       <workItem from="1660047355238" duration="10914000" />
       <workItem from="1660199623533" duration="25821000" />
+      <workItem from="1660546444089" duration="47687000" />
+      <workItem from="1660806848655" duration="11994000" />
+      <workItem from="1660909948073" duration="212000" />
+      <workItem from="1661151227618" duration="11856000" />
+      <workItem from="1661243554873" duration="41000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -118,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660233684501</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: add service.json, modify ReportService.js">
+      <created>1661242104659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661242104659</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +173,7 @@
     <MESSAGE value="feat: add report table" />
     <MESSAGE value="refactor: decouple data fetching logic and other refactoring" />
     <MESSAGE value="add report filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="add report filters" />
+    <MESSAGE value="feat: add service.json, modify ReportService.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add service.json, modify ReportService.js" />
   </component>
 </project>

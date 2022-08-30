@@ -1,10 +1,11 @@
 import React from 'react';
 import classes from './MyTable.module.css'
 
+
 const MyTable = ({rows, columns}) => {
     return (
         <div className={classes.myTable}>
-            <table>
+            <table style={{width: '100%'}}>
                 <thead>
                 <tr>
                     {columns.map((column, index) => {
