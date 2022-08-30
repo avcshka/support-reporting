@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="add report filters">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: adjust the style of datepicker" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
