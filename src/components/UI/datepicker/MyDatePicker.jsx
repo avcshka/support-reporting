@@ -24,7 +24,6 @@ const MyDatePicker = ({onChangeDate}) => {
         <div className={cl.datePickerContainer}>
             <div>
                 <DatePicker
-                    style={{}}
                     className={cl.datePicker}
                     dateFormat="dd/MM/yyyy"
                     selectsRange={true}
