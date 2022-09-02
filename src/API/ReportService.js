@@ -3,12 +3,8 @@ import Service from './Service.json'
 
 export default class ReportService {
     static async getAll(reportType, dateStart, dateEnd) {
-        try {
             const resp = await axios.get(`${Service.SERVER_URL_TABLE}&dbeg=${dateStart}&dend=${dateEnd}&ttt=2&typ=${reportType}`)
             return resp.data
-        } catch (e) {
-            console.log("getAll()", e);
-        }
     }
 
     static async getMenu() {
