@@ -7,7 +7,9 @@
 }
 
 .datePicker {
-    box-sizing: border-box;
-    width: 145px;
-    height: 20px;
+    width: 160px;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 10px;
 }
