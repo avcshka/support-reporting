@@ -19,6 +19,7 @@
     background-color: #58a76c;
     color: white;
     font-size: 16px;
+    border-radius: 5px;
 }
 
 .myTable td {

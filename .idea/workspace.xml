@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: adjust the style of datepicker" />
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +98,7 @@
       <workItem from="1660909948073" duration="212000" />
       <workItem from="1661151227618" duration="11856000" />
       <workItem from="1661243554873" duration="41000" />
+      <workItem from="1661870886018" duration="29286000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -146,11 +150,11 @@
       <updated>1661242104659</updated>
     </task>
     <task id="LOCAL-00008" summary="feat: adjust the style of datepicker">
-      <created>1661867349958</created>
+      <created>1661865152593</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1661867349958</updated>
+      <updated>1661865152593</updated>
     </task>
     <option name="localTasksCounter" value="9" />
     <servers />
@@ -178,6 +182,7 @@
     <MESSAGE value="refactor: decouple data fetching logic and other refactoring" />
     <MESSAGE value="add report filters" />
     <MESSAGE value="feat: add service.json, modify ReportService.js" />
+    <MESSAGE value="chore: fix the space in MyMainView component." />
     <MESSAGE value="feat: adjust the style of datepicker" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: adjust the style of datepicker" />
   </component>

@@ -5,13 +5,25 @@ import MyHeaderView from "./headerview/MyHeaderView";
 import ReportService from "../../API/ReportService";
 import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
+import noDataImage from "../../assets/img/noDataImage.png"
+import {useFetching} from "../hooks/useFetching";
 
 const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
     const [columns, setColumns] = useState([]);
-    const [isReportLoading, setIsReportLoading] = useState(false);
     const [reportStartDate, setReportStartDate] = useState(new Date());
     const [reportEndDate, setReportEndDate] = useState(new Date());
+    const [fetchTable, isReportLoading, reportError] = useFetching(async (id, dateStart, dateEnd) => {
+        const responseTable = await ReportService.getAll(id, dateStart, dateEnd)
+        if (responseTable && responseTable.length) {
+            setRows(responseTable);
+            setColumns(Object.keys(responseTable[0]));
+        } else {
+            setRows([]);
+            setColumns([]);
+        }
+
+    })
 
     const onChangeDate = (startDate, endDate) => {
         setReportStartDate(startDate)
@@ -27,14 +39,6 @@ const MyMainView = ({reportId}) => {
         }
     }, [reportId, reportStartDate, reportEndDate])
 
-    async function fetchTable(id, dateStart, dateEnd) {
-        setIsReportLoading(true);
-        const responseTable = await ReportService.getAll(id, dateStart, dateEnd);
-        setRows(responseTable);
-        setColumns(Object.keys(responseTable[0]));
-        setIsReportLoading(false);
-    }
-
     return (
         <div className={classes.myMainView}>
 
@@ -46,10 +50,13 @@ const MyMainView = ({reportId}) => {
 
             {isReportLoading
                 ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>
-                : <MyTable columns={columns} rows={rows}/>
+                : !rows.length
+                    ? <div className={classes.myNoDataImage}><img src={noDataImage} alt={'no Data...'}/></div>
+                    : <MyTable columns={columns} rows={rows}/>
             }
-            {!isReportLoading && !rows.length
-                ? <h1>No data ...</h1>
+
+            {reportError
+                ? <h1 style={{display:'flex',alignContent:'center',justifyContent:'center', color:'gray'}}>Произошла ошибка {reportError}</h1>
                 : <div></div>
             }
 

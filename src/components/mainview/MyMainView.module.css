@@ -5,3 +5,9 @@
     flex-direction: column;
     background-color: #fcfcfc;
 }
+
+.myNoDataImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
