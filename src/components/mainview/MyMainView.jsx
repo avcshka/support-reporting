@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import classes from "./MyMainView.module.css"
 import MyTable from "../UI/table/MyTable";
 import MyHeaderView from "./headerview/MyHeaderView";
@@ -7,6 +7,7 @@ import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
 import noDataImage from "../../assets/img/noDataImage.png"
 import {useFetching} from "../hooks/useFetching";
+import MyInput from "../UI/input/MyInput";
 
 const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
@@ -39,6 +40,16 @@ const MyMainView = ({reportId}) => {
         }
     }, [reportId, reportStartDate, reportEndDate])
 
+    const [searchQuery, setSearchQuery] = useState('');
+
+    const filteredRows = useMemo(() => {
+        return rows.filter((row) => {
+            for (let column of columns) {
+                return row[column].toLowerCase().includes(searchQuery.toLowerCase())
+            }
+        });
+    }, [searchQuery, rows]);
+
     return (
         <div className={classes.myMainView}>
 
@@ -46,17 +57,37 @@ const MyMainView = ({reportId}) => {
 
             <hr/>
 
-            <MyDatePicker onChangeDate={onChangeDate} />
+            <div className={classes.searchInput}>
+                <form>
+                    <input
+                        style={{
+                            width: '240px',
+                            height: '26px',
+                            borderRadius: '5px',
+                            border: '1px solid gray',
+                            padding: '10px',
+                            marginRight: '10px'
+                        }}
+                        type={'text'}
+                        value={searchQuery}
+                        placeholder={'Search...'}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </form>
+
+                <MyDatePicker onChangeDate={onChangeDate}/>
+            </div>
 
             {isReportLoading
                 ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>
                 : !rows.length
                     ? <div className={classes.myNoDataImage}><img src={noDataImage} alt={'no Data...'}/></div>
-                    : <MyTable columns={columns} rows={rows}/>
+                    : <MyTable columns={columns} rows={filteredRows}/>
             }
 
             {reportError
-                ? <h1 style={{display:'flex',alignContent:'center',justifyContent:'center', color:'gray'}}>Произошла ошибка {reportError}</h1>
+                ? <h1 style={{display: 'flex', alignContent: 'center', justifyContent: 'center', color: 'gray'}}>
+                    Произошла ошибка {reportError} </h1>
                 : <div></div>
             }
 
