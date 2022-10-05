@@ -7,6 +7,7 @@ import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
 import noDataImage from "../../assets/img/noDataImage.png"
 import {useFetching} from "../hooks/useFetching";
+import MySearchInput from "../UI/searchInput/MySearchInput";
 
 const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
@@ -41,6 +42,10 @@ const MyMainView = ({reportId}) => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
+    const getSearchQuery = (query) => {
+        setSearchQuery(query);
+    }
+
     const filteredRows = useMemo(() => {
         return rows.filter((row) => !searchQuery.toLowerCase() ||
             columns.some((column) => {
@@ -59,24 +64,11 @@ const MyMainView = ({reportId}) => {
             <hr/>
 
             <div className={classes.searchInput}>
-                <form>
-                    <input
-                        style={{
-                            width: '240px',
-                            height: '26px',
-                            borderRadius: '5px',
-                            border: '1px solid gray',
-                            padding: '10px',
-                            marginRight: '10px'
-                        }}
-                        type={'text'}
-                        value={searchQuery}
-                        placeholder={'Search...'}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                    />
-                </form>
+
+                <MySearchInput getSearchQuery={getSearchQuery}/>
 
                 <MyDatePicker onChangeDate={onChangeDate}/>
+
             </div>
 
             {isReportLoading
