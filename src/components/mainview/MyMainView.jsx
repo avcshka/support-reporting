@@ -7,7 +7,6 @@ import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
 import noDataImage from "../../assets/img/noDataImage.png"
 import {useFetching} from "../hooks/useFetching";
-import MyInput from "../UI/input/MyInput";
 
 const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
@@ -43,12 +42,14 @@ const MyMainView = ({reportId}) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const filteredRows = useMemo(() => {
-        return rows.filter((row) => {
-            for (let column of columns) {
-                return row[column].toLowerCase().includes(searchQuery.toLowerCase())
-            }
-        });
-    }, [searchQuery, rows]);
+        return rows.filter((row) => !searchQuery.toLowerCase() ||
+            columns.some((column) => {
+                if (row[column] === undefined) {
+                    return false;
+                }
+                return row[column].toString().toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
+            }));
+    },[searchQuery, rows])
 
     return (
         <div className={classes.myMainView}>
