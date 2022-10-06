@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="">
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add general filter to the table and improve his styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/add-date-filter-to-reports-table" />
+        <entry key="$PROJECT_DIR$" value="feat/add-checks-for-report-table" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,7 +47,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexInter/my-projects/js-practice&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/AlexInter/Workspace/ZohoReport/frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -99,6 +100,11 @@
       <workItem from="1661151227618" duration="11856000" />
       <workItem from="1661243554873" duration="41000" />
       <workItem from="1661870886018" duration="29286000" />
+      <workItem from="1662369189743" duration="3890000" />
+      <workItem from="1663159098991" duration="126000" />
+      <workItem from="1663829353319" duration="50835000" />
+      <workItem from="1664807800844" duration="9088000" />
+      <workItem from="1664893944068" duration="15071000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
@@ -184,6 +190,7 @@
     <MESSAGE value="feat: add service.json, modify ReportService.js" />
     <MESSAGE value="chore: fix the space in MyMainView component." />
     <MESSAGE value="feat: adjust the style of datepicker" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: adjust the style of datepicker" />
+    <MESSAGE value="feat: improve the styling of data table" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: improve the styling of data table" />
   </component>
 </project>

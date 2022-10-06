@@ -21,22 +21,20 @@ const MyDatePicker = ({onChangeDate}) => {
     }
 
     return (
-        <div className={cl.datePickerContainer}>
-            <div>
-                <DatePicker
-                    className={cl.datePicker}
-                    dateFormat="dd/MM/yyyy"
-                    selectsRange={true}
-                    startDate={startDate}
-                    endDate={endDate}
-                    onChange={(update) => {
-                        onChange(update);
-                    }}
-                    maxDate={new Date()}
-                    placeholderText="Input your date"
-                    showDisabledMonthNavigation
-                />
-            </div>
+        <div>
+            <DatePicker
+                className={cl.datePicker}
+                dateFormat="dd/MM/yyyy"
+                selectsRange={true}
+                startDate={startDate}
+                endDate={endDate}
+                onChange={(update) => {
+                    onChange(update);
+                }}
+                maxDate={new Date()}
+                placeholderText="Input your date"
+                showDisabledMonthNavigation
+            />
         </div>
     );
 };
