@@ -52,7 +52,7 @@ const MyMainView = ({reportId}) => {
                 if (row[column] === undefined) {
                     return false;
                 }
-                return row[column].toString().toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
+                return row[column].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
             }));
     },[searchQuery, rows])
 

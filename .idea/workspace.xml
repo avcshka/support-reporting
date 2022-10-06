@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add general filter to the table and improve his styling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

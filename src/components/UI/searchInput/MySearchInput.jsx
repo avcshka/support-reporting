@@ -4,10 +4,10 @@ import {useState} from "react";
 
 const MySearchInput = ({getSearchQuery}) => {
 
-    const [searchQueries, setSearchQueries] = useState('');
+    const [searchQuery, setSearchQuery] = useState('');
 
-    const getQueries = () => {
-        getSearchQuery(searchQueries);
+    const onChangeSearchQuery = () => {
+        getSearchQuery(searchQuery);
     }
 
     return (
@@ -17,8 +17,8 @@ const MySearchInput = ({getSearchQuery}) => {
                     className={classes.mySearchInput}
                     type={'text'}
                     placeholder={'Search...'}
-                    value={searchQueries}
-                    onChange={(e) => getQueries(setSearchQueries(e.target.value))}
+                    value={searchQuery}
+                    onChange={(e) => onChangeSearchQuery(setSearchQuery(e.target.value))}
                 />
             </form>
         </div>
