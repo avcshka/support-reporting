@@ -1,7 +1,8 @@
-.datePicker {
-    width: 160px;
+.mySearchInput {
+    width: 240px;
     height: 26px;
     border-radius: 5px;
     border: 1px solid gray;
     padding: 10px;
+    margin-right: 10px;
 }
