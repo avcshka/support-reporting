@@ -91,8 +91,7 @@ const MyMainView = ({reportId}) => {
             }
 
             {reportError
-                ? <h1 style={{display: 'flex', alignContent: 'center', justifyContent: 'center', color: 'gray'}}>
-                    Произошла ошибка {reportError} </h1>
+                ? <h1 style={{display:'flex',alignContent:'center',justifyContent:'center', color:'gray'}}>Произошла ошибка {reportError}</h1>
                 : <div></div>
             }
 
