@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="feat: add general filter to the table and improve his styling">
+    <list default="true" id="6668162f-762e-4b86-b65a-5622a01c15c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
@@ -14,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feat/add-checks-for-report-table" />
+        <entry key="$PROJECT_DIR$" value="feat/add-general-filter-to-the-table" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,6 +105,8 @@
       <workItem from="1663829353319" duration="50835000" />
       <workItem from="1664807800844" duration="9088000" />
       <workItem from="1664893944068" duration="15071000" />
+      <workItem from="1665137867329" duration="45328000" />
+      <workItem from="1666081328966" duration="46255000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1658404513507</created>
