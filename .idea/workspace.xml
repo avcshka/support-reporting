@@ -187,7 +187,6 @@
     <MESSAGE value="chore: fix the space in MyMainView component." />
     <MESSAGE value="feat: adjust the style of datepicker" />
     <MESSAGE value="feat: improve the styling of data table" />
-    <MESSAGE value="feat: add pagination to the table, fix live search." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add pagination to the table, fix live search." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: improve the styling of data table" />
   </component>
 </project>

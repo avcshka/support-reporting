@@ -1,14 +1,14 @@
 import classes from './MySearchInput.module.css'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 const MySearchInput = ({getSearchQuery}) => {
 
     const [searchQuery, setSearchQuery] = useState('');
 
-    const onChangeSearchQuery = () => {
+    useEffect(() => {
         getSearchQuery(searchQuery);
-    }
+    })
 
     return (
         <div>
@@ -18,7 +18,7 @@ const MySearchInput = ({getSearchQuery}) => {
                     type={'text'}
                     placeholder={'Search...'}
                     value={searchQuery}
-                    onChange={(e) => onChangeSearchQuery(setSearchQuery(e.target.value))}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                 />
             </form>
         </div>
