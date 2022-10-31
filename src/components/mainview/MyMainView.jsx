@@ -31,6 +31,7 @@ const MyMainView = ({reportId}) => {
             setTotalRowsCount(responseTable.length);
             setTotalPages(getPageCount(responseTable.length, limitRows));
         }
+
     })
 
     const onChangeDate = (startDate, endDate) => {
