@@ -16,20 +16,20 @@ const MyMainView = ({reportId}) => {
     const [reportStartDate, setReportStartDate] = useState(new Date());
     const [reportEndDate, setReportEndDate] = useState(new Date());
     const [totalPages, setTotalPages] = useState(0);
-    const [limitRows] = useState(16);
+    const limitRows = 16;
     const [page, setPage] = useState(0);
+    const [totalRowsCount, setTotalRowsCount] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
 
     const [fetchTable, isReportLoading, reportError] = useFetching(async (id, dateStart, dateEnd) => {
+        setRows([]);
+        setColumns([]);
         const responseTable = await ReportService.getAll(id, dateStart, dateEnd)
         if (responseTable && responseTable.length) {
             setRows(responseTable);
             setColumns(Object.keys(responseTable[0]));
-            const responseLength = responseTable.length;
-            setTotalPages(getPageCount(responseLength, limitRows));
-        } else {
-            setRows([]);
-            setColumns([]);
+            setTotalRowsCount(responseTable.length);
+            setTotalPages(getPageCount(responseTable.length, limitRows));
         }
     })
 
@@ -39,13 +39,14 @@ const MyMainView = ({reportId}) => {
     }
 
     useEffect(() => {
+        setRows([]);
+        setColumns([]);
         if (reportId > 0) {
-            setPage(0);
             fetchTable(reportId, reportStartDate, reportEndDate);
-        } else {
-            setRows([]);
-            setColumns([]);
         }
+        setPage(0);
+        setTotalRowsCount(0);
+        setTotalPages(0);
     }, [reportId, reportStartDate, reportEndDate])
 
     const pagesArray = [...Array(totalPages).keys()];
@@ -65,22 +66,20 @@ const MyMainView = ({reportId}) => {
     }, [searchQuery, rows, columns])
 
     const filteredAndPagedRows = useMemo(() => {
-        setTotalPages(getPageCount(filteredRows.length, limitRows));
         return filteredRows.slice(page * limitRows, page * limitRows + limitRows);
     }, [filteredRows, page, limitRows])
 
     return (
         <div className={classes.myMainView}>
+
             <MyHeaderView/>
 
             <hr/>
 
             <div className={classes.searchInput}>
-
                 <MySearchInput getSearchQuery={getSearchQuery}/>
 
                 <MyDatePicker onChangeDate={onChangeDate}/>
-
             </div>
 
             {isReportLoading
@@ -91,8 +90,10 @@ const MyMainView = ({reportId}) => {
             }
 
             {reportError
-                ? <h1 style={{display:'flex',alignContent:'center',justifyContent:'center', color:'gray'}}>Произошла ошибка {reportError}</h1>
-                : <div></div>
+                ?
+                <h1 style={{display: 'flex', alignContent: 'center', justifyContent: 'center', color: 'gray'}}>Произошла
+                    ошибка {reportError}</h1>
+                : <div/>
             }
 
             <div>
@@ -103,6 +104,11 @@ const MyMainView = ({reportId}) => {
                     >{p + 1}</button>
                 )}
             </div>
+
+            {totalRowsCount
+                ? <div>Всего записей: {totalRowsCount}</div>
+                : <div/>
+            }
 
         </div>
     );

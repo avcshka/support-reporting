@@ -5,8 +5,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import cl from './MyDatePicker.module.css'
 
 const MyDatePicker = ({onChangeDate}) => {
-    const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new Date())
+    const currentDay = new Date();
+    const [startDate, setStartDate] = useState(new Date(currentDay.getFullYear(), currentDay.getMonth() - 1, 1))
+    const [endDate, setEndDate] = useState(new Date(currentDay.getFullYear(), currentDay.getMonth(), 0))
 
     useEffect(() => {
         if (startDate && endDate) {
