@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import classes from "./MyMainView.module.css"
 import MyTable from "../UI/table/MyTable";
-import MyHeaderView from "./headerview/MyHeaderView";
 import ReportService from "../../API/ReportService";
 import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
@@ -73,10 +72,6 @@ const MyMainView = ({reportId}) => {
     return (
         <div className={classes.myMainView}>
 
-            <MyHeaderView/>
-
-            <hr/>
-
             <div className={classes.searchInput}>
                 <MySearchInput getSearchQuery={getSearchQuery}/>
 
@@ -87,7 +82,7 @@ const MyMainView = ({reportId}) => {
                 ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>
                 : !rows.length
                     ? <div className={classes.myNoDataImage}><img src={noDataImage} alt={'no Data...'}/></div>
-                    : <MyTable columns={columns} rows={filteredAndPagedRows}/>
+                    : <MyTable style={{overflow: 'auto'}} columns={columns} rows={filteredAndPagedRows}/>
             }
 
             {reportError
@@ -98,16 +93,19 @@ const MyMainView = ({reportId}) => {
             }
 
             <div>
-                {pagesArray.map(p =>
-                    <button
-                        onClick={() => setPage(p)}
-                        key={p}
-                    >{p + 1}</button>
-                )}
+                {totalPages > 1
+                    ? pagesArray.map(p =>
+                        <button
+                            onClick={() => setPage(p)}
+                            key={p}
+                        >{p + 1}</button>
+                    )
+                    : <div/>
+                }
             </div>
 
             {totalRowsCount
-                ? <div>Всего записей: {totalRowsCount}</div>
+                ? <div> {page + 1} страница по {totalPages} из {totalRowsCount} записей</div>
                 : <div/>
             }
 
