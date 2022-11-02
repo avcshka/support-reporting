@@ -8,6 +8,7 @@ export const useFetching = (callback) => {
         try {
             setIsLoading(true)
             await callback(id, dateStart, dateEnd)
+            setError('');
         } catch (e) {
             setError(e.message);
         } finally {

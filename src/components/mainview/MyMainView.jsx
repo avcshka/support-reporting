@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import classes from "./MyMainView.module.css"
 import MyTable from "../UI/table/MyTable";
-import MyHeaderView from "./headerview/MyHeaderView";
 import ReportService from "../../API/ReportService";
 import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
@@ -16,21 +15,22 @@ const MyMainView = ({reportId}) => {
     const [reportStartDate, setReportStartDate] = useState(new Date());
     const [reportEndDate, setReportEndDate] = useState(new Date());
     const [totalPages, setTotalPages] = useState(0);
-    const [limitRows] = useState(16);
+    const limitRows = 16;
     const [page, setPage] = useState(0);
+    const [totalRowsCount, setTotalRowsCount] = useState(0);
     const [searchQuery, setSearchQuery] = useState('');
 
     const [fetchTable, isReportLoading, reportError] = useFetching(async (id, dateStart, dateEnd) => {
+        setRows([]);
+        setColumns([]);
         const responseTable = await ReportService.getAll(id, dateStart, dateEnd)
         if (responseTable && responseTable.length) {
             setRows(responseTable);
             setColumns(Object.keys(responseTable[0]));
-            const responseLength = responseTable.length;
-            setTotalPages(getPageCount(responseLength, limitRows));
-        } else {
-            setRows([]);
-            setColumns([]);
+            setTotalRowsCount(responseTable.length);
+            setTotalPages(getPageCount(responseTable.length, limitRows));
         }
+
     })
 
     const onChangeDate = (startDate, endDate) => {
@@ -39,13 +39,14 @@ const MyMainView = ({reportId}) => {
     }
 
     useEffect(() => {
+        setRows([]);
+        setColumns([]);
         if (reportId > 0) {
-            setPage(0);
             fetchTable(reportId, reportStartDate, reportEndDate);
-        } else {
-            setRows([]);
-            setColumns([]);
         }
+        setPage(0);
+        setTotalRowsCount(0);
+        setTotalPages(0);
     }, [reportId, reportStartDate, reportEndDate])
 
     const pagesArray = [...Array(totalPages).keys()];
@@ -65,44 +66,48 @@ const MyMainView = ({reportId}) => {
     }, [searchQuery, rows, columns])
 
     const filteredAndPagedRows = useMemo(() => {
-        setTotalPages(getPageCount(filteredRows.length, limitRows));
         return filteredRows.slice(page * limitRows, page * limitRows + limitRows);
     }, [filteredRows, page, limitRows])
 
     return (
         <div className={classes.myMainView}>
-            <MyHeaderView/>
-
-            <hr/>
 
             <div className={classes.searchInput}>
-
                 <MySearchInput getSearchQuery={getSearchQuery}/>
 
                 <MyDatePicker onChangeDate={onChangeDate}/>
-
             </div>
 
             {isReportLoading
                 ? <div style={{display: 'flex', justifyContent: 'center', marginTop: 100}}><Loader/></div>
                 : !rows.length
                     ? <div className={classes.myNoDataImage}><img src={noDataImage} alt={'no Data...'}/></div>
-                    : <MyTable columns={columns} rows={filteredAndPagedRows}/>
+                    : <MyTable style={{overflow: 'auto'}} columns={columns} rows={filteredAndPagedRows}/>
             }
 
             {reportError
-                ? <h1 style={{display:'flex',alignContent:'center',justifyContent:'center', color:'gray'}}>Произошла ошибка {reportError}</h1>
-                : <div></div>
+                ?
+                <h1 style={{display: 'flex', alignContent: 'center', justifyContent: 'center', color: 'gray'}}>Произошла
+                    ошибка {reportError}</h1>
+                : <div/>
             }
 
             <div>
-                {pagesArray.map(p =>
-                    <button
-                        onClick={() => setPage(p)}
-                        key={p}
-                    >{p + 1}</button>
-                )}
+                {totalPages > 1
+                    ? pagesArray.map(p =>
+                        <button
+                            onClick={() => setPage(p)}
+                            key={p}
+                        >{p + 1}</button>
+                    )
+                    : <div/>
+                }
             </div>
+
+            {totalRowsCount
+                ? <div> {page + 1} страница по {totalPages} из {totalRowsCount} записей</div>
+                : <div/>
+            }
 
         </div>
     );
