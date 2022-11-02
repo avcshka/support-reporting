@@ -3,10 +3,12 @@ import DatePicker from "react-datepicker";
 import convertDate from "../../../helpers/convertDate";
 import "react-datepicker/dist/react-datepicker.css";
 import cl from './MyDatePicker.module.css'
+import moment from "moment/moment";
 
 const MyDatePicker = ({onChangeDate}) => {
-    const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new Date())
+    const [startDate, setStartDate] = useState(moment().subtract(1, 'months').toDate())
+    const [endDate, setEndDate] = useState(moment().toDate())
+
 
     useEffect(() => {
         if (startDate && endDate) {
