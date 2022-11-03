@@ -1,29 +1,29 @@
 .myTable {
-    margin-top: 20px;
-    overflow: scroll;
+    margin: 20px 40px 20px 20px;
+    overflow: auto;
+    border-radius: 16px;
+    background-color: white;
+    scrollbar-width: thin;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
 }
 
-.myTable td, .myTable th {
-    border: 1px solid #ddd;
-    padding: 8px;
+.myTable tr {
+    font-size: 18px;
+    border-bottom: 1px solid lightgray;
 }
 
-.myTable tr:nth-child(even){background-color: #f2f2f2;}
-
-.myTable tr:hover {background-color: #ddd;}
+.myTable tr:hover {
+    transition-duration: 0.1s;
+    background-color: #fff6ec;
+}
 
 .myTable th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 18px;
     text-align: left;
-    background-color: #58a76c;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
+    color: #8ae695;
+    font-size: 19px;
 }
 
 .myTable td {
-    font-family: arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 16px;
 }

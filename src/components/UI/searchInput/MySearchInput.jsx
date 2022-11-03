@@ -1,7 +1,6 @@
 import classes from './MySearchInput.module.css'
 import {useEffect, useState} from "react";
 
-
 const MySearchInput = ({getSearchQuery}) => {
 
     const [searchQuery, setSearchQuery] = useState('');

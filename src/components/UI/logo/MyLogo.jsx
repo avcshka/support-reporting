@@ -5,7 +5,8 @@ const MyLogo = () => {
 
     return (
         <div className={classes.myLogo}>
-            Oculeus
+            <h2 style={{color:'white'}}>OCULEUS</h2>
+            <h5 style={{color:'white'}}>report</h5>
         </div>
     );
 };

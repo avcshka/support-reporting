@@ -1,8 +1,16 @@
 .mySearchInput {
-    width: 240px;
-    height: 26px;
+    width: 360px;
+    height: 38px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: none;
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 20px;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);
+    font-size: 16px;
+    transition-duration: 0.3s;
+    outline: none;
+}
+
+.mySearchInput:hover {
+    color: #8f8e8e;
 }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be0a25e2-6c55-4539-acd3-c92f55b369ed" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/button/MyButton.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/calendar/MyCalendar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/datepicker/MyDatePicker.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/logo/MyLogo.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/searchInput/MySearchInput.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/table/MyTable.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mainview/MyMainView.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mainview/headerview/MyHeaderView.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/MyMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/MyNavbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/MyNavbar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/App.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/antd/dist/antd.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/node_modules/react-datepicker/dist/es/index.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/public/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/API/ReportService.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/API/Service.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/UI/icon/Icon.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/main/MyMain.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/mainview/MyMainView.jsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/menu/MyMenu.jsx" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2H1zKgk4my7l2iebij6CyNQFdBR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be0a25e2-6c55-4539-acd3-c92f55b369ed" name="Changes" comment="" />
+      <created>1667467319888</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667467319888</updated>
+      <workItem from="1667467324667" duration="14230000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
