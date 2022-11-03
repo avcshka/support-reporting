@@ -1,9 +1,9 @@
 .myMainView {
     width: 85%;
-    height: auto;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #fcfcfc;
+    background-color: #f4f3f1;
 }
 
 .myNoDataImage {
@@ -16,6 +16,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 40px;
     margin-right: 16px;
+}
+
+.paginationAndRows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px 20px 20px
+}
+
+.rowsCount {
+    font-size: 18px;
+    font-weight: 500;
 }

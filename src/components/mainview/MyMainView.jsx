@@ -8,6 +8,8 @@ import noDataImage from "../../assets/img/noDataImage.png"
 import {useFetching} from "../hooks/useFetching";
 import MySearchInput from "../UI/searchInput/MySearchInput";
 import {getPageCount} from "../../utils/pages";
+import {Pagination} from "antd";
+import 'antd/dist/antd.css';
 
 const MyMainView = ({reportId}) => {
     const [rows, setRows] = useState([]);
@@ -30,7 +32,6 @@ const MyMainView = ({reportId}) => {
             setTotalRowsCount(responseTable.length);
             setTotalPages(getPageCount(responseTable.length, limitRows));
         }
-
     })
 
     const onChangeDate = (startDate, endDate) => {
@@ -49,8 +50,6 @@ const MyMainView = ({reportId}) => {
         setTotalPages(0);
     }, [reportId, reportStartDate, reportEndDate])
 
-    const pagesArray = [...Array(totalPages).keys()];
-
     const getSearchQuery = (query) => {
         setSearchQuery(query);
     }
@@ -66,6 +65,7 @@ const MyMainView = ({reportId}) => {
     }, [searchQuery, rows, columns])
 
     const filteredAndPagedRows = useMemo(() => {
+        setTotalPages(getPageCount(filteredRows.length, limitRows));
         return filteredRows.slice(page * limitRows, page * limitRows + limitRows);
     }, [filteredRows, page, limitRows])
 
@@ -73,6 +73,7 @@ const MyMainView = ({reportId}) => {
         <div className={classes.myMainView}>
 
             <div className={classes.searchInput}>
+
                 <MySearchInput getSearchQuery={getSearchQuery}/>
 
                 <MyDatePicker onChangeDate={onChangeDate}/>
@@ -92,25 +93,24 @@ const MyMainView = ({reportId}) => {
                 : <div/>
             }
 
-            <div>
+            <div className={classes.paginationAndRows}>
                 {totalPages > 1
-                    ? pagesArray.map(p =>
-                        <button
-                            onClick={() => setPage(p)}
-                            key={p}
-                        >{p + 1}</button>
-                    )
+                    ? <div className={classes.rowsCount}> Всего {totalPages} стр. где {totalRowsCount} записей</div>
+                    : <div/>
+                }
+
+                {totalPages > 1
+                    ? <Pagination
+                        showQuickJumper
+                        pageSize={limitRows}
+                        total={totalRowsCount}
+                        onChange={(p) => setPage(p - 1)}
+                    />
                     : <div/>
                 }
             </div>
-
-            {totalRowsCount
-                ? <div> {page + 1} страница по {totalPages} из {totalRowsCount} записей</div>
-                : <div/>
-            }
-
         </div>
-    );
+    )
 };
 
 export default MyMainView;

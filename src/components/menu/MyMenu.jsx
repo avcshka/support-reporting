@@ -1,7 +1,8 @@
 import Icon from "../UI/icon/Icon";
 import MyButton from "../UI/button/MyButton";
 import classes from "./MyMenu.module.css"
-import {useState} from "react";
+import React, {useState} from "react";
+import MyLogo from "../UI/logo/MyLogo";
 
 const MyMenu = ({menuItems, changeActiveMenuItem}) => {
     const [activeMenuId, setActiveMenuId] = useState(0);
@@ -13,6 +14,9 @@ const MyMenu = ({menuItems, changeActiveMenuItem}) => {
 
     return (
         <div className={classes.myMenu}>
+
+            <MyLogo/>
+
             <div>
                 {menuItems.map((menuItem, index) =>
                     <MyButton

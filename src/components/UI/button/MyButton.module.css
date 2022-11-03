@@ -2,17 +2,18 @@
     width: auto;
     height: auto;
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
     background: transparent;
     border: none;
     cursor: pointer;
     color: white;
+    transition-duration: 0.2s;
 }
 
 .myBtn:hover {
-    color: #13bc3e;
+    color: #ffc78d;
 }
 
 .myBtn.active {
-    color: orange;
+    color: lightgreen;
 }
