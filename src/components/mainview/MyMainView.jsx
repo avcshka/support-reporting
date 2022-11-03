@@ -71,7 +71,6 @@ const MyMainView = ({reportId}) => {
 
     return (
         <div className={classes.myMainView}>
-            <MyHeaderView/>
 
             <hr/>
 
