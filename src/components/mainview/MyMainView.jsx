@@ -72,8 +72,6 @@ const MyMainView = ({reportId}) => {
     return (
         <div className={classes.myMainView}>
 
-            <hr/>
-
             <div className={classes.searchInput}>
 
                 <MySearchInput getSearchQuery={getSearchQuery}/>
