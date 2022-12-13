@@ -1,17 +1,17 @@
-import React, {useEffect, useMemo, useState} from 'react';
-import classes from "./MyMainView.module.css"
+import React, {useEffect, useState} from 'react';
+import classes from "./MyContent.module.css"
 import MyTable from "../UI/table/MyTable";
 import ReportService from "../../API/ReportService";
 import Loader from "../UI/Loader/Loader";
 import MyDatePicker from "../UI/datepicker/MyDatePicker";
 import noDataImage from "../../assets/img/noDataImage.png"
 import {useFetching} from "../hooks/useFetching";
-import MySearchInput from "../UI/searchInput/MySearchInput";
 import {getPageCount} from "../../utils/pages";
-import {Pagination} from "antd";
 import 'antd/dist/antd.css';
+import MySearch from "../UI/search/MySearch";
+import MyPagination from "../UI/pagination/MyPagination";
 
-const MyMainView = ({reportId}) => {
+const MyContent = ({reportId}) => {
     const [rows, setRows] = useState([]);
     const [columns, setColumns] = useState([]);
     const [reportStartDate, setReportStartDate] = useState(new Date());
@@ -20,7 +20,7 @@ const MyMainView = ({reportId}) => {
     const limitRows = 16;
     const [page, setPage] = useState(0);
     const [totalRowsCount, setTotalRowsCount] = useState(0);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredAndPagedRows, setFilteredAndPagedRows] = useState('');
 
     const [fetchTable, isReportLoading, reportError] = useFetching(async (id, dateStart, dateEnd) => {
         setRows([]);
@@ -50,32 +50,21 @@ const MyMainView = ({reportId}) => {
         setTotalPages(0);
     }, [reportId, reportStartDate, reportEndDate])
 
-    const getSearchQuery = (query) => {
-        setSearchQuery(query);
+    const getFilteredAndPagedRows = (filteredRows) => {
+        setFilteredAndPagedRows(filteredRows)
     }
 
-    const filteredRows = useMemo(() => {
-        return rows.filter((row) => !searchQuery.toLowerCase() ||
-            columns.some((column) => {
-                if (row[column] === undefined) {
-                    return false;
-                }
-                return row[column].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
-            }));
-    }, [searchQuery, rows, columns])
-
-    const filteredAndPagedRows = useMemo(() => {
-        setTotalPages(getPageCount(filteredRows.length, limitRows));
-        return filteredRows.slice(page * limitRows, page * limitRows + limitRows);
-    }, [filteredRows, page, limitRows])
+    const getTotalPages = (totalPages) => {
+        setTotalPages(totalPages)
+    }
 
     return (
         <div className={classes.myMainView}>
 
-            <div className={classes.searchInput}>
-
-                <MySearchInput getSearchQuery={getSearchQuery}/>
-
+            <div className={classes.filters}>
+                <MySearch rows={rows} columns={columns} getFilteredAndPagedRows={getFilteredAndPagedRows}
+                          limitRows={limitRows} page={page} getTotalPages={getTotalPages}
+                />
                 <MyDatePicker onChangeDate={onChangeDate}/>
             </div>
 
@@ -92,25 +81,9 @@ const MyMainView = ({reportId}) => {
                     ошибка {reportError}</h1>
                 : <div/>
             }
-
-            <div className={classes.paginationAndRows}>
-                {totalPages > 1
-                    ? <div className={classes.rowsCount}> Всего {totalPages} стр. где {totalRowsCount} записей</div>
-                    : <div/>
-                }
-
-                {totalPages > 1
-                    ? <Pagination
-                        showQuickJumper
-                        pageSize={limitRows}
-                        total={totalRowsCount}
-                        onChange={(p) => setPage(p - 1)}
-                    />
-                    : <div/>
-                }
-            </div>
+            <MyPagination totalPages={totalPages} totalRowsCount={totalRowsCount} limitRows={limitRows} setPage={setPage} />
         </div>
     )
 };
 
-export default MyMainView;
+export default MyContent;

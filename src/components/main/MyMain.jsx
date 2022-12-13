@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import MyMenu from "../menu/MyMenu";
-import MyMainView from "../mainview/MyMainView";
+import MySidebar from "../sidebar/MySidebar";
+import MyContent from "../content/MyContent";
 import ReportService from "../../API/ReportService";
 import classes from "./MyMain.module.css"
 
@@ -29,9 +29,9 @@ const MyMain = () => {
     return (
         <div className={classes.myMain}>
 
-            <MyMenu menuItems={menuItems} changeActiveMenuItem={changeActiveMenuItems}/>
+            <MySidebar menuItems={menuItems} changeActiveMenuItem={changeActiveMenuItems}/>
 
-            <MyMainView reportId={activeMenuItemId}/>
+            <MyContent reportId={activeMenuItemId}/>
 
         </div>
     );
