@@ -1,10 +1,10 @@
 import Icon from "../UI/icon/Icon";
 import MyButton from "../UI/button/MyButton";
-import classes from "./MyMenu.module.css"
+import classes from "./MySidebar.module.css"
 import React, {useState} from "react";
 import MyLogo from "../UI/logo/MyLogo";
 
-const MyMenu = ({menuItems, changeActiveMenuItem}) => {
+const MySidebar = ({menuItems, changeActiveMenuItem}) => {
     const [activeMenuId, setActiveMenuId] = useState(0);
 
     const onChangeActiveMenuItem = (id) => {
@@ -39,4 +39,4 @@ const MyMenu = ({menuItems, changeActiveMenuItem}) => {
     );
 };
 
-export default MyMenu;
+export default MySidebar;

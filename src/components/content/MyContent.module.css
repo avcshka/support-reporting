@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.searchInput {
+.filters {
     display: flex;
     justify-content: flex-end;
     align-items: center;

@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 const MyFooter = () => {
     return (
         <div>
@@ -8,5 +6,4 @@ const MyFooter = () => {
         </div>
     );
 };
-
 export default MyFooter;
